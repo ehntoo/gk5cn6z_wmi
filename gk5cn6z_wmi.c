@@ -1,11 +1,13 @@
 #include <linux/module.h>	/* Needed by all modules */
 #include <linux/kernel.h>	/* Needed for KERN_INFO */
 #include <linux/init.h>		/* Needed for the macros */
-#define DRIVER_AUTHOR "Peter Jay Salzman <p@dirac.org>"
-#define DRIVER_DESC   "A sample driver"
+#define DRIVER_AUTHOR "Mitchell Johnson <ehntoo@ehntoo.org>"
+#define DRIVER_DESC   "GK5CN6Z WMI Driver"
 
 #define GK5CN6Z_ECRAM_GUID      "ABBC0F6F-8EA1-11D1-00A0-C90629100000"
-#define GK5CN6Z_ECRAM_METHOD_ID 5
+#define GK5CN6Z_ECRAM_METHOD_ID 4
+
+#define GK5CN6Z_EVENT_GUID      "ABBC0F72-8EA1-11d1-00A0-C90629100000"
 
 static int __init init_hello_4(void)
 {
