@@ -1,0 +1,24 @@
+class WMIEvent : __ExtrinsicEvent {
+};
+
+[WMI, Locale("MS\\0x409"), Description("This class contains the definition of the package used in other classes"), guid("{ABBC0F60-8EA1-11d1-00A0-C90629100000}")]
+class Package {
+  [WmiDataId(1), read, write, Description("16 bytes of data")] uint8 Bytes[16];
+};
+
+[WMI, Dynamic, Provider("WmiProv"), Locale("MS\\0x409"), Description("Class used to operate methods on a ULong"), guid("{DBBC0F6F-8EA1-11d1-00A0-C90629100000}")]
+class AcpiODM_Demo {
+  [key, read] String InstanceName;
+  [read] Boolean Active;
+
+  [WmiMethodId(1), Implemented, read, write, Description("Get Set the contents of a Long for Ex1")] void GetUlongEx1([in, Description("long Data")] sint32 Data, [out, Description("long Data")] sint32 Return);
+  [WmiMethodId(2), Implemented, read, write, Description("Get Set the contents of a Long for Ex2")] void GetUlongEx2([in, Description("long Data")] sint32 Data, [out, Description("long Data")] sint32 Return);
+  [WmiMethodId(3), Implemented, read, write, Description("Get Set the contents of a Long for Ex3")] void GetUlongEx3([in, Description("long Data")] sint32 Data, [out, Description("long Data")] sint32 Return);
+  [WmiMethodId(4), Implemented, read, write, Description("Get Set the contents of a Long for Ex4")] void GetUlongEx4([in, Description("long Data")] sint32 Data, [out, Description("long Data")] sint32 Return);
+  [WmiMethodId(5), Implemented, read, write, Description("Get Set the contents of a Long for Ex5")] void GetUlongEx5([in, Description("long Data")] sint32 Data, [out, Description("long Data")] sint32 Return);
+  [WmiMethodId(6), Implemented, read, write, Description("Get Set the contents of a Long for Ex6")] void GetUlongEx6([in, Description("long Data")] sint32 Data, [out, Description("long Data")] sint32 Return);
+  [WmiMethodId(7), Implemented, read, write, Description("Get Set the contents of a Long for Ex7")] void GetUlongEx7([in, Description("int64 Data")] uint64 Data, [out, Description("long Data")] uint32 Return);
+  [WmiMethodId(8), Implemented, read, write, Description("Get Set the contents of a Long for Ex8")] void GetUlongEx8([in, Description("long Data")] sint32 Data, [out, Description("long Data")] sint32 Return);
+  [WmiMethodId(9), Implemented, read, write, Description("Get Set the contents of a Long for Ex9")] void GetUlongEx9([in, Description("long Data")] sint32 Data, [out, Description("long Data")] sint32 Return);
+  [WmiMethodId(10), Implemented, read, write, Description("Get Set the contents of a Long for Ex10")] void GetUlongEx10([in, Description("long Data")] sint32 Data, [out, Description("long Data")] sint32 Return);
+};
